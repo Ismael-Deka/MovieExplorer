@@ -9,9 +9,6 @@ A simple movie discovery app
 
 -Flask 2.0.2
 
-
-##APIs
-
 -TheMovieDB API
 
 -MediaWiki Action API
