@@ -1,0 +1,46 @@
+import random
+import urllib
+import urllib.request
+import json
+import flask
+import os
+app = flask.Flask(__name__)
+
+
+file = open("api_key","r")
+api_key = file.read()
+api_key = api_key.splitlines(0)[0] ##gets rid of line break
+file.close()
+
+
+movie_id = random.randrange(3)
+
+trending_url = "https://api.themoviedb.org/3/movie/"+movie_list[movie_id]+"?api_key="+api_key
+
+response = urllib.request.urlopen(trending_url)
+data = response.read()
+text = data.decode('utf-8')
+
+movie_json = json.loads(text)
+
+Title = movie_json['results']['original_title']
+Overview = movie_json['results']['overview']
+Genre = movie_json['results']['genre_ids']
+Poster_path = movie_json['results']['poster_path']
+
+poster_url = "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/"+Poster_path
+
+file = open('poster.jpg','wb')
+file.write(urllib.urlopen(poster_url).read())
+file.close()
+
+genres = ""
+
+for i in Genre:
+    genres = genres + movie_genres[Genre[i]]+","
+
+def index():
+    return flask.render_template("index.html",1, title = Title, overview = Overview, genre = genres )
+app.run(
+    debug=True
+)

@@ -1,11 +1,20 @@
 body {
   background-color: lightblue;
-  text-align: center
+  text-align: center;
 }
 
 
 li {
   font-size: 16px;
   
+}
+img{
+	vertical-align: middle
+}
+
+a{
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
 }
 
