@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <meta charset="utf-8">
-                <link rel="stylesheet" href="/static/style.css">
 
-        </head>
-        <body>
-			<h1>{{title}}</h>
-                		
-			<li>{{overview}}</li>
-			<li>{{genre}}</li>
-						
-			<img src={{poster}} alt="Movie Poster" width = "300" height = "450">
-                  		<li><a href={{wiki}}>Click Here to learn more about this movie.</a></li>	
-                	
-        </body>
+<head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+        <h1>{{title}}</h><br>
+
+                <a>{{overview}}</a><br>
+                <a>{{genre}}</a><br>
+
+                <img src={{poster}} alt="Movie Poster" width="300" height="450"><br>
+                <a>
+                        <a href={{wiki}}>Click Here to learn more about this movie.</a>
+                </a><br>
+
+
+
+                {%if comment_posted_success == True%}
+                <br><a>Comment posted successfully.</a>
+                {%elif comment_posted_success == True:%}
+                <br><a>Comment failed to post. Please try again.</a>
+                {%else:%}
+                <a>Welcome back, {{username}}</a>
+                {%endif%}
+
+                <form action="/post/{{movie_id}}/{{username}}" method="POST">
+                        <label for="movie_id" style="font-size:16px" ;>Movie ID:</label>
+                        <label type="text" style="font-size:16px" name="movie_id" value=>{{movie_id}}</label>
+
+                        <label for="rating" style="font-size:16px" ;>Rating (out of 5)</label>
+                        <select name="rating" style="width:50px" id="cars">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                        </select><br><br>
+
+                        <input type="text" name="comment" style="height:50px" placeholder="Leave a comment" /><br>
+                        <input type="submit" name="sumbit" /><br>
+
+                </form>
+
+                {%for i in comment%}
+                <div style="font-size:20px;">User: {{i.user}} -- Rating: {{i.rating}}/5</div>
+                <a>{{i.comment}}</a><br>
+                {%endfor%}
+
+</body>
 
 </html>

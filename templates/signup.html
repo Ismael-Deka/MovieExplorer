@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <h1 id="centerform">Sign up
+
+        <form action="/signup" method="POST">
+            <input type="text" name="username" placeholder="Username">
+            <input type="submit" name="submit">
+
+
+
+        </form>
+        <a href="/">Login in to Movie Explorer.</a>
+
+        {%if user_already_exists == True%}
+        <a>That username is already in use.</a>
+        {%endif%}
+
+        {%if db_error == True%}
+        <a>Something when Wrong. Please try again.</a>
+
+        {%endif%}
+
+    </h1>
+</body>
+
+</html>
