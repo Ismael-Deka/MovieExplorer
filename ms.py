@@ -5,6 +5,7 @@ import urllib.request
 import json
 import flask
 from dataclasses import dataclass
+import os
 
 
 from flask import Flask, request, redirect, url_for
@@ -13,9 +14,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 
-app.config[
-    "SQLALCHEMY_DATABASE_URI"
-] = "postgresql://dtyeoojeryxznl:0b791239905e2b0212c0294b42956e9c7e4c61a02a6f2cd61a6e4e1464073499@ec2-34-233-157-189.compute-1.amazonaws.com:5432/d5g5ot7l2pm17p"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI")
 
 db = SQLAlchemy(app)
 
@@ -99,7 +98,7 @@ def postComment(id, username):
 @app.route("/movies/user/<string:user>")
 @app.route("/movies/user/<string:user>/id/<string:id>")
 def index(user, id=-1):
-    api_key = getApiKey()
+    api_key = os.getenv("API_KEY")
 
     # movie_list = ["238", "550", "115"]
 
