@@ -24,3 +24,6 @@ A simple movie discovery app
 
 -Sumbiting form data. had to update @app.route() so it matchs the "action" on the form
 
+# Link to deployed app
+
+https://movieexploer.herokuapp.com/
