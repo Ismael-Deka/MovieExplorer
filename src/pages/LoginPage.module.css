@@ -1,0 +1,21 @@
+.login{
+  padding: 50x;
+}
+
+.username{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  border-width: thin;
+  height: 30px;
+}
+
+.welcome_logo {
+  font-size: 2rem;
+  margin-bottom: 15px
+}
+
+body {
+    background-color: #F5F5F5;
+  }
+

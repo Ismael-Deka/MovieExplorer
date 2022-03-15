@@ -1,0 +1,11 @@
+.commentlist{
+    margin: 5vh;
+}
+
+#comment_length{
+    font-size: larger;
+}
+
+.commentlist > *{
+    margin-bottom: 5vh ;
+}

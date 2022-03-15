@@ -1,0 +1,30 @@
+.commentform{
+    margin: 2rem;
+}
+
+.commentlogo{
+    font-size: 1.5rem;
+    margin-bottom: 3vh;
+}
+
+.commentbox{
+    width: 30vw;
+    height: 10vh;
+    border-radius: 6px;
+    border-width: thin;
+
+}
+
+.commentoptions{
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.commentoptions > *{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+

@@ -1,0 +1,47 @@
+.logincard{
+    margin-top: 5vh;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .postercard {
+    display: block;
+    width: 20vw;
+    text-align: center;
+    margin-right: 5% ;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}
+
+.commentform{
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}
+
+.commentlist{
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}

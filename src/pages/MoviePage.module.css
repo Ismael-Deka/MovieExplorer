@@ -1,0 +1,13 @@
+.flexbox_row {
+    margin-top: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.flexbox_column {
+   
+    display: flex;
+    flex-direction: column;
+}

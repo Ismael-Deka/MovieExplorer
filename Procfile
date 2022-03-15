@@ -1,2 +1,2 @@
-web: python ms.py
+web: python routes.py
 
