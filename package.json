@@ -13,6 +13,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "heroku-postbuild": "npm install && npm run build",
     "start": "react-scripts start",
     "build": "BUILD_PATH='./static/react' react-scripts build",
     "test": "react-scripts test",
