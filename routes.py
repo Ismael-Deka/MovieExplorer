@@ -23,9 +23,6 @@ class MovieList:
     godfather: str
 
 
-app.register_blueprint(bp)
-
-
 @bp.route("/")
 @bp.route("/movie")
 @bp.route("/signup")
@@ -34,6 +31,9 @@ def index():
     # NB: DO NOT add an "index.html" file in your normal templates folder
     # Flask will stop serving this React page correctly
     return flask.render_template("index.html")
+
+
+app.register_blueprint(bp)
 
 
 @app.route("/login", methods=["POST", "GET"])
