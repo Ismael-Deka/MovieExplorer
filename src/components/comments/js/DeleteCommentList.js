@@ -27,13 +27,11 @@ function DeleteCommentList(props) {
         <div className={classes.commentlist}>
             <div id="comment_length">{props.length} Comment(s)</div>
             {props.comments.map(comment =>
-                <div>
+                (comment.rating !== "" && comment.comment !== "") && <div>
                     <Comment
                         user={comment.user}
                         rating={comment.rating}
-                        comment={comment.comment}
-
-                    />
+                        comment={comment.comment} />
 
                     <button onClick={event => {
                         deleteCommentById(comment.id)
