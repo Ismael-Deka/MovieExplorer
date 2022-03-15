@@ -12,9 +12,7 @@ bp = flask.Blueprint(
 
 app = Flask(__name__)
 
-app.config[
-    "SQLALCHEMY_DATABASE_URI"
-] = "postgresql://zqqntapzbixydu:32206c2e30f69fa017327dc53c27798f78f4dbef2804b19bbda5004d4aa1ed88@ec2-3-212-45-192.compute-1.amazonaws.com:5432/devsdleosdarcp"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI")
 
 
 db = SQLAlchemy(app)
