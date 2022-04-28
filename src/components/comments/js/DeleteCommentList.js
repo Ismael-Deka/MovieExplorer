@@ -27,7 +27,7 @@ function DeleteCommentList(props) {
         <div className={classes.commentlist}>
             <div id="comment_length">{props.length} Comment(s)</div>
             {props.comments.map(comment =>
-                (comment.rating !== "" && comment.comment !== "") && <div>
+                (comment.rating !== null && comment.comment !== null) && <div>
                     <Comment
                         user={comment.user}
                         rating={comment.rating}
